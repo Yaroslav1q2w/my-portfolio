@@ -1,0 +1,48 @@
+.container {
+	display: flex;
+	justify-content: center;
+
+	.innerBlock {
+		max-width: 1200px;
+		width: 100%;
+		padding: 0 1rem;
+		display: flex;
+		justify-content: space-between;
+
+		.content {
+			flex: 1;
+			margin-left: 2rem;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+
+			.title {
+				font-size: 70px;
+				font-weight: 700;
+				letter-spacing: -4px;
+				color: #333;
+				margin-bottom: 1rem;
+			}
+
+			.text {
+				font-size: 17px;
+				line-height: 1.8;
+				color: #757575;
+				font-weight: 300;
+				margin-bottom: 1rem;
+				padding-top: 1rem;
+			}
+		}
+
+		.imageContainer {
+			flex: 2;
+			max-width: 400px;
+
+			.profileImage {
+				width: 100%;
+				height: auto;
+				border-radius: 10px;
+			}
+		}
+	}
+}

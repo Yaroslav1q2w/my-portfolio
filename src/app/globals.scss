@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	background-color: #fff;
+}
+
+.wrapper {
+	background-color: #fff;
+	position: relative;
+	bottom: 100px;
+	margin-top: 8px;
+	padding-top: 160px;
+	border-radius: 40px 40px 0 0;
+	display: flex;
+	justify-content: center;
+}
+
+.main__content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}

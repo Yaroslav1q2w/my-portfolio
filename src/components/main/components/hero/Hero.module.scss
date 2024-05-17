@@ -1,0 +1,32 @@
+.heroContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.heroContent {
+		max-width: 1200px;
+		width: 100%;
+		padding: 0 1rem;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		.heroDescription {
+			padding-right: 40px;
+		}
+
+		.heroTitle {
+			font-size: 46px;
+			font-weight: 600;
+			line-height: 1.4;
+			color: #000;
+		}
+
+		.heroText {
+			color: rgb(82, 82, 82);
+			font-size: 18px;
+			font-weight: 300;
+			padding-top: 26px;
+		}
+	}
+}

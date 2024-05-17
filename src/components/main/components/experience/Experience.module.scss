@@ -1,0 +1,74 @@
+.experienceContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+
+	.experienceInner {
+		max-width: 1200px;
+		width: 100%;
+		padding: 16px;
+
+		.experienceHeader {
+			padding-left: 10px;
+
+			.experienceTitle {
+				margin-bottom: 30px;
+				font-size: 16px;
+				color: #000;
+				font-weight: 600;
+			}
+
+			.companyName {
+				font-size: 20px;
+				font-weight: bold;
+				color: #000;
+				margin-bottom: 8px;
+			}
+
+			.workDuration {
+				font-size: 17px;
+				color: #333;
+				font-weight: 400;
+				margin-bottom: 5px;
+			}
+		}
+
+		.experienceContent {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 40px 0;
+
+			.experienceImg {
+				height: auto;
+				margin-right: 30px;
+				filter: grayscale(100%);
+				border-radius: 8px;
+			}
+
+			.experienceDetails {
+				height: 100%;
+				flex-grow: 1;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				padding: 20px;
+
+				.workDescription {
+					font-size: 15px;
+					color: rgb(82, 82, 82);
+					line-height: 1.8;
+					font-weight: 300;
+					padding: 20px 0;
+					border-bottom: 1px solid rgb(214, 214, 214);
+				}
+
+				.experienceColor {
+					font-weight: 600;
+					color: #444;
+				}
+			}
+		}
+	}
+}

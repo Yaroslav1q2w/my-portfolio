@@ -1,0 +1,19 @@
+.formGroup {
+	display: flex;
+	flex-direction: column;
+
+	.formInput {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		outline: none;
+		font-size: 14px;
+		background-color: #fff;
+	}
+
+	.errorMessage {
+		color: #ff0000;
+		font-size: 14px;
+		margin-top: 5px;
+	}
+}

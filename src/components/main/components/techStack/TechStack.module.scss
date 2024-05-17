@@ -1,0 +1,60 @@
+.techStack {
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	border-radius: 40px;
+	margin-top: 160px;
+
+	.techContent {
+		padding: 100px 16px;
+		max-width: 1200px;
+		width: 100%;
+
+		.techTitle {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 0.5px;
+			display: flex;
+			width: 100%;
+			align-items: center;
+
+			&::after {
+				content: "";
+				flex-grow: 1;
+				display: inline-block;
+				height: 1px;
+				background-color: rgb(56, 56, 56);
+				margin-left: 20px;
+			}
+		}
+
+		.techList {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px 40px;
+			color: #fff;
+			padding-top: 40px;
+		}
+
+		.techItem {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			padding: 10px;
+			border: 1px solid rgb(56, 56, 56);
+			border-radius: 8px;
+			line-height: 1.2;
+		}
+
+		.techIcon {
+			font-size: 40px;
+			color: #fff;
+		}
+
+		.techName {
+			font-size: 20px;
+			font-weight: 500;
+		}
+	}
+}
