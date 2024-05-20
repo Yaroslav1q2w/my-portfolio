@@ -1,30 +1,79 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useRef, useEffect, useState } from "react";
 import styles from "./Experience.module.scss";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import laptop from "../../../../../public/laptop.webp";
+import {
+	imageAnimationLeft,
+	textOpacityAnimation,
+} from "@/animations/animations";
 
 const Experience: FC = () => {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
+	const [startAnimation, setStartAnimation] = useState(false);
+
+	useEffect(() => {
+		if (isInView) {
+			setStartAnimation(true);
+		}
+	}, [isInView]);
+
 	return (
-		<div className={styles.experienceContainer}>
-			<div className={styles.experienceInner}>
-				<div className={styles.experienceHeader}>
-					<h1 className={styles.experienceTitle}>My Professional Experience</h1>
+		<motion.div
+			className={styles.experienceContainer}
+			ref={ref}
+			initial="hidden"
+			animate={startAnimation ? "visible" : "hidden"}
+		>
+			<motion.div className={styles.experienceInner}>
+				<motion.div className={styles.experienceHeader}>
+					<motion.h1
+						className={styles.experienceTitle}
+						variants={textOpacityAnimation}
+						custom={1}
+					>
+						My Professional Experience
+					</motion.h1>
+					<motion.h2
+						className={styles.companyName}
+						variants={textOpacityAnimation}
+						custom={1.2}
+					>
+						WhoCPA
+					</motion.h2>
+					<motion.p
+						className={styles.workDuration}
+						variants={textOpacityAnimation}
+						custom={1.4}
+					>
+						Frontend Developer
+					</motion.p>
+					<motion.p
+						className={styles.workDuration}
+						variants={textOpacityAnimation}
+						custom={1.6}
+					>
+						December 2022 - March 2024
+					</motion.p>
+				</motion.div>
 
-					<h2 className={styles.companyName}>WhoCPA</h2>
-					<p className={styles.workDuration}>Frontend Developer</p>
-
-					<p className={styles.workDuration}>December 2022 - March 2024</p>
-				</div>
-
-				<div className={styles.experienceContent}>
-					<Image
-						src="/laptop.webp"
-						alt="Company Logo"
-						width={400}
-						height={600}
-						className={styles.experienceImg}
-					/>
-					<div className={styles.experienceDetails}>
-						<p className={styles.workDescription}>
+				<motion.div className={styles.experienceContent}>
+					<motion.div variants={imageAnimationLeft} custom={2}>
+						<Image
+							src={laptop}
+							alt="Company Logo"
+							className={styles.experienceImg}
+						/>
+					</motion.div>
+					<motion.div className={styles.experienceDetails}>
+						<motion.p
+							className={styles.workDescription}
+							variants={textOpacityAnimation}
+							custom={2.6}
+						>
 							<span className={styles.experienceColor}>
 								As a frontend developer
 							</span>
@@ -33,27 +82,35 @@ const Experience: FC = () => {
 							devices. My work encompassed the full cycle of webpage
 							creation—from conception to implementation—with a particular focus
 							on interface detailing and interaction optimization.
-						</p>
-						<p className={styles.workDescription}>
+						</motion.p>
+						<motion.p
+							className={styles.workDescription}
+							variants={textOpacityAnimation}
+							custom={2.8}
+						>
 							<span className={styles.experienceColor}>I effectively </span>
 							implemented engaging animations and transitions that significantly
 							increased user engagement and enhanced site interaction. This not
 							only ensured the smoothness and visual appeal of the pages but
 							also contributed to increased conversion rates thanks to a better
 							user experience.
-						</p>
-						<p className={styles.workDescription}>
-							<span className={styles.experienceColor}>Additionally </span>,
-							experienceColorI developed web pages with integrated server
-							requests to optimize functionality and ensure fast content
-							delivery. My proficiency in HTML, CSS, and JavaScript allowed me
-							to produce clean, efficient code that meets modern web standards
-							and adjusts to different browsers and screen sizes.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+						</motion.p>
+						<motion.p
+							className={styles.workDescription}
+							variants={textOpacityAnimation}
+							custom={3}
+						>
+							<span className={styles.experienceColor}>Additionally </span>, I
+							developed web pages with integrated server requests to optimize
+							functionality and ensure fast content delivery. My proficiency in
+							HTML, CSS, and JavaScript allowed me to produce clean, efficient
+							code that meets modern web standards and adjusts to different
+							browsers and screen sizes.
+						</motion.p>
+					</motion.div>
+				</motion.div>
+			</motion.div>
+		</motion.div>
 	);
 };
 

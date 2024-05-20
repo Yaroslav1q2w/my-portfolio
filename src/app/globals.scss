@@ -23,3 +23,10 @@ body {
 	flex-direction: column;
 	width: 100%;
 }
+
+.loadingContainer {
+	display: flex;
+	padding-top: 100px;
+	justify-content: center;
+	height: 100vh;
+}

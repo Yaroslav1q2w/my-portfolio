@@ -13,20 +13,25 @@
 
 		.heroDescription {
 			padding-right: 40px;
+
+			.heroTitle {
+				font-size: 46px;
+				font-weight: 600;
+				line-height: 1.4;
+				color: #000;
+			}
+
+			.heroText {
+				color: rgb(82, 82, 82);
+				font-size: 18px;
+				font-weight: 300;
+				padding-top: 26px;
+			}
 		}
 
-		.heroTitle {
-			font-size: 46px;
-			font-weight: 600;
-			line-height: 1.4;
-			color: #000;
-		}
-
-		.heroText {
-			color: rgb(82, 82, 82);
-			font-size: 18px;
-			font-weight: 300;
-			padding-top: 26px;
+		.heroImg {
+			height: auto;
+			max-width: 400px;
 		}
 	}
 }

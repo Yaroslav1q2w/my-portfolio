@@ -1,42 +1,65 @@
+"use client";
+
 import { FC } from "react";
 import styles from "./About.module.scss";
-import profileImage from "../../assets/images/profile.jpg";
+import profileImage from "../../../public/IMG_6690.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+	imageAnimationLeft,
+	textAnimationRight,
+} from "@/animations/animations";
 
 const About: FC = () => {
 	return (
-		<div className={styles.container}>
-			<div className={styles.innerBlock}>
-				<div className={styles.imageContainer}>
+		<motion.div className={styles.container} initial="hidden" animate="visible">
+			<motion.div className={styles.innerBlock}>
+				<motion.div
+					className={styles.imageContainer}
+					variants={imageAnimationLeft}
+				>
 					<Image
-						src="/IMG_6690.jpg"
+						src={profileImage}
 						alt="about-img"
-						width={400}
-						height={600}
 						className={styles.profileImage}
+						priority={true}
 					/>
-				</div>
-				<div className={styles.content}>
-					<h2 className={styles.title}>About Me.</h2>
-					<p className={styles.text}>
+				</motion.div>
+				<motion.div className={styles.content}>
+					<motion.h2
+						className={styles.title}
+						variants={textAnimationRight}
+						custom={0}
+					>
+						About Me.
+					</motion.h2>
+					<motion.p
+						className={styles.text}
+						variants={textAnimationRight}
+						custom={0.2}
+					>
 						As a frontend developer with a deep passion for creating dynamic web
 						applications, I specialize in using cutting-edge technologies and
 						best development practices. My skills encompass HTML5, CSS3,
 						JavaScript (ES6+), React, and Node.js, allowing me to create
 						user-friendly and adaptive designs optimized for the best user
 						experience.
-					</p>
-					<p className={styles.text}>
+					</motion.p>
+					<motion.p
+						className={styles.text}
+						variants={textAnimationRight}
+						custom={0.4}
+					>
 						In my professional development, I am constantly progressing and
 						refining my skills. I enjoy setting myself new challenges and
 						continuously improving my abilities to provide quality and
 						innovative solutions in my projects. I believe that continuous
 						self-improvement is the key to success in any field, so I
-						enthusiastically embrace new challenges and enrich my knowledge."
-					</p>
-				</div>
-			</div>
-		</div>
+						enthusiastically embrace new challenges and enrich my knowledge.
+					</motion.p>
+				</motion.div>
+			</motion.div>
+		</motion.div>
 	);
 };
 

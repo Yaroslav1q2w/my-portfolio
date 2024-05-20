@@ -30,20 +30,33 @@
 			text-decoration: none;
 		}
 
+		.navList {
+			display: flex;
+		}
 		.navItem {
-			margin: 0 10px;
 			font-size: 14px;
+			margin: 0 10px;
 			color: #fff;
 			text-decoration: none;
 			padding: 8px 20px;
 			background-color: #000;
 			border-radius: 20px;
-
-			&:hover {
-			}
+			transition: background-color 0.3s, color 0.3s, box-shadow 0.3s,
+				border 0.2s, font-weight 0.3s;
+			box-sizing: border-box;
+			width: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 35px;
 		}
 
 		.active {
+			background-color: #fff;
+			color: #000;
+			font-weight: 700;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			border: 2px solid #000;
 		}
 	}
 }

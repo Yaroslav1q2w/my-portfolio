@@ -12,6 +12,12 @@ import Field from "@/components/ui/field/Field";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IMyForm } from "@/types/form.types";
 import Textarea from "@/components/ui/textarea/Textarea";
+import { motion } from "framer-motion";
+import {
+	textAnimationRight,
+	textLeftAnimation,
+	textOpacityAnimation,
+} from "@/animations/animations";
 
 const Contact: FC = () => {
 	const {
@@ -25,15 +31,15 @@ const Contact: FC = () => {
 	};
 
 	return (
-		<div className={styles.contact}>
+		<motion.div className={styles.contact} initial="hidden" animate="visible">
 			<div className={styles.contactInfo}>
-				<div className={styles.left}>
+				<motion.div className={styles.left} variants={textLeftAnimation}>
 					<h2 className={styles.title}>Contact Us.</h2>
 					<p className={styles.text}>
 						Feel free to reach out to us through any of the following platforms:
 					</p>
-				</div>
-				<div className={styles.icons}>
+				</motion.div>
+				<motion.div className={styles.icons} variants={textAnimationRight}>
 					<a
 						href="https://www.linkedin.com/in/yaroslav-kucherenko-500783263/"
 						target="_blank"
@@ -74,10 +80,14 @@ const Contact: FC = () => {
 						</span>
 						<span className={styles.iconText}>Telegram</span>
 					</a>
-				</div>
+				</motion.div>
 			</div>
 			<div className={styles.contactForm}>
-				<div className={styles.innerForm}>
+				<motion.div
+					className={styles.innerForm}
+					custom={1}
+					variants={textOpacityAnimation}
+				>
 					<h2 className={styles.formTitle}>Send me an email</h2>
 
 					<form className={styles.formWrap} onSubmit={handleSubmit(onSubmit)}>
@@ -121,9 +131,9 @@ const Contact: FC = () => {
 							Send email
 						</button>
 					</form>
-				</div>
+				</motion.div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

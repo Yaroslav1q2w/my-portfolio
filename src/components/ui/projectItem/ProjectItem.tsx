@@ -8,13 +8,13 @@ import { IProjectItem } from "@/types/projectItem.types";
 const ProjectItem: FC<IProjectItem> = ({ url, imageSrc, projectName }) => {
 	return (
 		<Link target="_blank" href={url} className={styles.projectItem}>
-			<Image
-				src={imageSrc}
-				width={300}
-				height={200}
-				alt={projectName}
-				className={styles.projectImage}
-			/>
+			<div className={styles.imgContainer}>
+				<Image
+					src={imageSrc}
+					alt={projectName}
+					className={styles.projectImage}
+				/>
+			</div>
 			<div className={styles.projectDescription}>
 				{projectName} <MdKeyboardArrowRight className={styles.arrow} />
 			</div>
