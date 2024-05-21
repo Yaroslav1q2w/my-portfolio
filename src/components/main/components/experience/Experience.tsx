@@ -58,7 +58,11 @@ const Experience: FC = () => {
 				</motion.div>
 
 				<motion.div className={styles.experienceContent}>
-					<motion.div variants={leftAnimation} custom={2}>
+					<motion.div
+						variants={leftAnimation}
+						custom={2}
+						className={styles.imageWrapper}
+					>
 						<Image
 							src={laptop}
 							alt="Company Logo"

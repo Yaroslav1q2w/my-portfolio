@@ -32,7 +32,12 @@
 
 		.navList {
 			display: flex;
+
+			@media (max-width: 768px) {
+				display: none;
+			}
 		}
+
 		.navItem {
 			font-size: 14px;
 			margin: 0 10px;

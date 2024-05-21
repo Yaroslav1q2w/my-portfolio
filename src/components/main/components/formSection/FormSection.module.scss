@@ -3,6 +3,10 @@
 	justify-content: center;
 	margin: 130px 0 30px;
 
+	@media (max-width: 772px) {
+		margin: 80px 10px 0px;
+	}
+
 	.inner {
 		display: flex;
 		align-items: center;
@@ -13,6 +17,13 @@
 		background-color: #000000;
 		border-radius: 40px;
 		margin: 10px;
+
+		@media (max-width: 600px) {
+			padding: 60px 20px;
+			flex-direction: column;
+			text-align: center;
+			gap: 30px;
+		}
 
 		.content {
 			width: 40%;
@@ -32,6 +43,10 @@
 				letter-spacing: 0.3px;
 				margin-top: 30px;
 				line-height: 1.8;
+			}
+
+			@media (max-width: 600px) {
+				width: 100%;
 			}
 		}
 
@@ -60,6 +75,10 @@
 						background-color: #ccc;
 					}
 				}
+			}
+
+			@media (max-width: 600px) {
+				width: 100%;
 			}
 		}
 	}

@@ -11,9 +11,15 @@
 	.inner {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		max-width: 1200px;
 		width: 100%;
 		padding: 0 1rem;
+
+		@media (max-width: 772px) {
+			flex-direction: column;
+			gap: 30px;
+		}
 
 		.socialIcons,
 		.right {
@@ -40,8 +46,12 @@
 		}
 
 		.right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+
 			.link {
-				margin-left: 20px;
 				color: #757575;
 				text-decoration: none;
 				font-weight: 300;

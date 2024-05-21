@@ -10,6 +10,10 @@
 		padding: 50px 16px 120px;
 		margin: auto;
 
+		@media (max-width: 882px) {
+			padding: 0px 16px 60px;
+		}
+
 		.headerSection {
 			display: flex;
 			justify-content: space-between;
@@ -36,6 +40,18 @@
 					font-weight: 300;
 					margin-bottom: 1rem;
 				}
+
+				@media (max-width: 882px) {
+					padding: 20px 20px;
+
+					.title {
+						font-size: 50px;
+					}
+
+					.text {
+						font-size: 15px;
+					}
+				}
 			}
 
 			.imageSection {
@@ -45,6 +61,10 @@
 				.projectImage {
 					width: 100%;
 					height: auto;
+				}
+
+				@media (max-width: 882px) {
+					display: none;
 				}
 			}
 		}
@@ -70,6 +90,17 @@
 				gap: 26px;
 				grid-template-columns: 1fr 1fr 1fr;
 				padding-top: 100px;
+
+				@media (max-width: 992px) {
+					padding-top: 80px;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 20px;
+				}
+
+				@media (max-width: 600px) {
+					grid-template-columns: 1fr;
+					gap: 20px;
+				}
 			}
 		}
 	}

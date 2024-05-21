@@ -72,4 +72,43 @@
 			}
 		}
 	}
+
+	@media (max-width: 768px) {
+		.experienceInner {
+			.experienceContent {
+				flex-direction: column;
+				align-items: center;
+
+				.imageWrapper {
+					display: none;
+				}
+
+				.imageWrapper {
+					margin: 0 0 20px 0;
+				}
+
+				.experienceDetails {
+					padding: 10px;
+
+					.workDescription {
+						padding: 10px 0;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		.experienceInner {
+			.experienceContent {
+				.experienceDetails {
+					padding: 0;
+
+					.workDescription {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
 }

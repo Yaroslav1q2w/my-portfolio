@@ -5,10 +5,18 @@
 	border-radius: 40px;
 	margin-top: 160px;
 
+	@media (max-width: 856px) {
+		margin-top: 100px;
+	}
+
 	.techContent {
 		padding: 100px 16px;
 		max-width: 1200px;
 		width: 100%;
+
+		@media (max-width: 856px) {
+			padding: 80px 16px;
+		}
 
 		.techTitle {
 			color: #fff;
@@ -35,6 +43,18 @@
 			gap: 20px 40px;
 			color: #fff;
 			padding-top: 40px;
+
+			@media (max-width: 1024px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@media (max-width: 768px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (max-width: 480px) {
+				grid-template-columns: 1fr;
+			}
 		}
 
 		.techItem {

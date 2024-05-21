@@ -17,6 +17,7 @@
 
 		.left {
 			width: 40%;
+
 			.title {
 				font-size: 70px;
 				letter-spacing: -4px;
@@ -52,7 +53,6 @@
 
 				.icon {
 					padding: 10px;
-					background-color: blue;
 					display: inline-block;
 					font-size: 30px;
 					color: #fff;
@@ -100,6 +100,46 @@
 				}
 				.iconText {
 					color: #0088cc;
+				}
+			}
+		}
+
+		@media (max-width: 882px) {
+			flex-direction: column;
+			align-items: center;
+			padding: 20px 20px;
+
+			.left {
+				width: 100%;
+
+				.title {
+					font-size: 50px;
+				}
+
+				.text {
+					font-size: 15px;
+				}
+			}
+		}
+
+		@media (max-width: 420px) {
+			.icons {
+				gap: 20px;
+
+				.iconWrap {
+					.icon {
+						padding: 10px;
+						display: inline-block;
+						font-size: 20px;
+						color: #fff;
+						border-radius: 50%;
+					}
+
+					.iconText {
+						font-size: 16px;
+						color: #000;
+						font-weight: 500;
+					}
 				}
 			}
 		}
@@ -154,6 +194,23 @@
 					padding: 12px 30px;
 					border: #333333 solid 1px;
 					border-radius: 4px;
+				}
+			}
+		}
+
+		@media (max-width: 600px) {
+			.innerForm {
+				.formTitle {
+					font-size: 30px;
+				}
+
+				.formWrap {
+					flex-direction: column;
+					gap: 20px;
+
+					.leftForm {
+						gap: 20px;
+					}
 				}
 			}
 		}

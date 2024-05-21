@@ -6,6 +6,11 @@
 	background: #f7f7f7;
 	padding-bottom: 50px;
 
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
 	.inner {
 		max-width: 1200px;
 		width: 100%;
@@ -50,6 +55,16 @@
 			margin-top: 40px;
 			gap: 40px;
 			padding: 0 30px;
+
+			@media (max-width: 992px) {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+
+			@media (max-width: 600px) {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
 		}
 
 		.moreInfo {

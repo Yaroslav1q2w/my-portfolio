@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 export interface IProjectItem {
 	imageSrc: string;
 	projectName: string;

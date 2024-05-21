@@ -2,6 +2,7 @@ import { FC } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdCloseCircle } from "react-icons/io";
 import styles from "./Modal.module.scss";
+import { opacityAnimation, topAnimation } from "@/animations/animations";
 
 interface ModalProps {
 	isOpen: boolean;
@@ -17,6 +18,10 @@ interface ModalProps {
 }
 
 const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
+	const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
+		e.stopPropagation();
+	};
+
 	return (
 		<AnimatePresence>
 			{isOpen && project && (
@@ -25,6 +30,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
+					onClick={onClose}
 				>
 					<motion.div
 						className={styles.modal}
@@ -32,22 +38,23 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						exit={{ y: 50, opacity: 0 }}
+						onClick={handleModalClick}
 					>
-						<motion.button onClick={onClose} className={styles.closeButton}>
+						<motion.button
+							onClick={onClose}
+							className={styles.closeButton}
+							variants={opacityAnimation}
+							initial="hidden"
+							animate="visible"
+							custom={0.6}
+						>
 							<IoMdCloseCircle />
 						</motion.button>
 						<motion.div className={styles.projectDetails}>
 							<motion.h2 className={styles.projectName}>
 								{project.projectName}
 							</motion.h2>
-							<motion.a
-								href={project.url}
-								target="_blank"
-								rel="noopener noreferrer"
-								className={styles.projectLink}
-							>
-								Visit Project
-							</motion.a>
+
 							<motion.h3 className={styles.sectionTitle}>
 								Technologies:
 							</motion.h3>
@@ -66,6 +73,16 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
 									</motion.li>
 								))}
 							</motion.ul>
+							<motion.a
+								href={project.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={styles.projectLink}
+								whileHover={{ scale: 1.1 }}
+								transition={{ type: "spring", stiffness: 400, damping: 8 }}
+							>
+								Visit Project
+							</motion.a>
 						</motion.div>
 					</motion.div>
 				</motion.div>
