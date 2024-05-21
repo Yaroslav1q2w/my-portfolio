@@ -7,24 +7,7 @@ import Field from "@/components/ui/field/Field";
 import Textarea from "@/components/ui/textarea/Textarea";
 import { IMyForm } from "@/types/form.types";
 import { motion, useInView } from "framer-motion";
-
-export const formAnimations = {
-	hidden: { opacity: 1, scale: 0 },
-	visible: {
-		opacity: 1,
-		scale: 1,
-		transition: {
-			duration: 0.3,
-			delayChildren: 0.6,
-			staggerChildren: 0.2,
-		},
-	},
-};
-
-export const itemAnimations = {
-	hidden: { opacity: 0, y: 20 },
-	visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+import { formAnimations, topAnimation } from "@/animations/animations";
 
 const FormSection: FC = () => {
 	const ref = useRef(null);
@@ -56,16 +39,24 @@ const FormSection: FC = () => {
 			variants={formAnimations}
 		>
 			<div className={styles.inner}>
-				<motion.div className={styles.content} variants={itemAnimations}>
+				<motion.div
+					className={styles.content}
+					variants={topAnimation}
+					custom={0.5}
+				>
 					<h2 className={styles.title}>Have any questions?</h2>
 					<p className={styles.text}>
 						Feel free to drop us a message, and I'll get back to you as soon as
 						possible!
 					</p>
 				</motion.div>
-				<motion.div className={styles.form} variants={itemAnimations}>
+				<motion.div
+					className={styles.form}
+					variants={topAnimation}
+					custom={0.6}
+				>
 					<form className={styles.formElem} onSubmit={handleSubmit(onSubmit)}>
-						<motion.div variants={itemAnimations}>
+						<div>
 							<Field
 								name="name"
 								placeholder="Enter your name"
@@ -74,8 +65,8 @@ const FormSection: FC = () => {
 								registerOptions={{ required: "Name is required" }}
 								errors={errors.name}
 							/>
-						</motion.div>
-						<motion.div variants={itemAnimations}>
+						</div>
+						<div>
 							<Field
 								name="email"
 								placeholder="Enter your email"
@@ -90,8 +81,8 @@ const FormSection: FC = () => {
 								}}
 								errors={errors.email}
 							/>
-						</motion.div>
-						<motion.div variants={itemAnimations}>
+						</div>
+						<div>
 							<Textarea
 								name="message"
 								placeholder="Enter your message"
@@ -99,12 +90,12 @@ const FormSection: FC = () => {
 								registerOptions={{ required: "Message is required" }}
 								errors={errors.message}
 							/>
-						</motion.div>
-						<motion.div variants={itemAnimations}>
+						</div>
+						<div>
 							<button type="submit" className={styles.formButton}>
 								Submit
 							</button>
-						</motion.div>
+						</div>
 					</form>
 				</motion.div>
 			</div>

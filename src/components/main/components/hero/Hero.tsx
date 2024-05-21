@@ -6,8 +6,8 @@ import Image from "next/image";
 import heroImg from "../../../../../public/IMG_6690.jpg";
 import { motion } from "framer-motion";
 import {
-	textLeftAnimation,
-	imageAnimationRight,
+	leftAnimation,
+	rightAnimation,
 } from "../../../../animations/animations";
 
 const Hero: FC = () => {
@@ -22,21 +22,21 @@ const Hero: FC = () => {
 					<motion.h1
 						className={styles.heroTitle}
 						custom={0}
-						variants={textLeftAnimation}
+						variants={leftAnimation}
 					>
 						I'm Yaroslav Kucherenko
 					</motion.h1>
 					<motion.h1
 						className={styles.heroTitle}
 						custom={0.2}
-						variants={textLeftAnimation}
+						variants={leftAnimation}
 					>
 						Frontend Web Developer
 					</motion.h1>
 					<motion.p
 						className={styles.heroText}
 						custom={0.4}
-						variants={textLeftAnimation}
+						variants={leftAnimation}
 					>
 						Front end developer who writes clean, elegant and efficient code.
 						<br />
@@ -47,7 +47,7 @@ const Hero: FC = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={imageAnimationRight}
+					variants={rightAnimation}
 				>
 					<Image
 						className={styles.heroImg}

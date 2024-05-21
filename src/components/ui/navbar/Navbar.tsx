@@ -7,19 +7,7 @@ import { menu } from "./menu.data";
 import { usePathname } from "next/navigation";
 import cn from "clsx";
 import { motion } from "framer-motion";
-
-const headerAnimation = {
-	hidden: { opacity: 0, y: -20 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			duration: 0.8,
-			ease: "easeOut",
-			delay: 1,
-		},
-	},
-};
+import { bottomAnimation } from "@/animations/animations";
 
 const Navbar: FC = () => {
 	const pathname = usePathname();
@@ -30,7 +18,8 @@ const Navbar: FC = () => {
 				className={styles.navContainer}
 				initial="hidden"
 				animate="visible"
-				variants={headerAnimation}
+				variants={bottomAnimation}
+				custom={1}
 			>
 				<Link href="/" className={styles.navLogo}>
 					Portfolio

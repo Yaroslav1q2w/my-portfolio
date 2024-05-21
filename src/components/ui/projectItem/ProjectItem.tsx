@@ -5,11 +5,12 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import styles from "./ProjectItem.module.scss";
 import { IProjectItem } from "@/types/projectItem.types";
 
-const ProjectItem: FC<IProjectItem> = ({ url, imageSrc, projectName }) => {
+const ProjectItem: FC<IProjectItem> = ({ imageSrc, projectName }) => {
 	return (
-		<Link target="_blank" href={url} className={styles.projectItem}>
+		<div className={styles.projectItem}>
 			<div className={styles.imgContainer}>
 				<Image
+					priority={true}
 					src={imageSrc}
 					alt={projectName}
 					className={styles.projectImage}
@@ -18,7 +19,7 @@ const ProjectItem: FC<IProjectItem> = ({ url, imageSrc, projectName }) => {
 			<div className={styles.projectDescription}>
 				{projectName} <MdKeyboardArrowRight className={styles.arrow} />
 			</div>
-		</Link>
+		</div>
 	);
 };
 

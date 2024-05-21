@@ -5,10 +5,7 @@ import styles from "./Experience.module.scss";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import laptop from "../../../../../public/laptop.webp";
-import {
-	imageAnimationLeft,
-	textOpacityAnimation,
-} from "@/animations/animations";
+import { leftAnimation, opacityAnimation } from "@/animations/animations";
 
 const Experience: FC = () => {
 	const ref = useRef(null);
@@ -32,28 +29,28 @@ const Experience: FC = () => {
 				<motion.div className={styles.experienceHeader}>
 					<motion.h1
 						className={styles.experienceTitle}
-						variants={textOpacityAnimation}
+						variants={opacityAnimation}
 						custom={1}
 					>
 						My Professional Experience
 					</motion.h1>
 					<motion.h2
 						className={styles.companyName}
-						variants={textOpacityAnimation}
+						variants={opacityAnimation}
 						custom={1.2}
 					>
 						WhoCPA
 					</motion.h2>
 					<motion.p
 						className={styles.workDuration}
-						variants={textOpacityAnimation}
+						variants={opacityAnimation}
 						custom={1.4}
 					>
 						Frontend Developer
 					</motion.p>
 					<motion.p
 						className={styles.workDuration}
-						variants={textOpacityAnimation}
+						variants={opacityAnimation}
 						custom={1.6}
 					>
 						December 2022 - March 2024
@@ -61,7 +58,7 @@ const Experience: FC = () => {
 				</motion.div>
 
 				<motion.div className={styles.experienceContent}>
-					<motion.div variants={imageAnimationLeft} custom={2}>
+					<motion.div variants={leftAnimation} custom={2}>
 						<Image
 							src={laptop}
 							alt="Company Logo"
@@ -71,8 +68,8 @@ const Experience: FC = () => {
 					<motion.div className={styles.experienceDetails}>
 						<motion.p
 							className={styles.workDescription}
-							variants={textOpacityAnimation}
-							custom={2.6}
+							variants={opacityAnimation}
+							custom={2}
 						>
 							<span className={styles.experienceColor}>
 								As a frontend developer
@@ -85,8 +82,8 @@ const Experience: FC = () => {
 						</motion.p>
 						<motion.p
 							className={styles.workDescription}
-							variants={textOpacityAnimation}
-							custom={2.8}
+							variants={opacityAnimation}
+							custom={2.2}
 						>
 							<span className={styles.experienceColor}>I effectively </span>
 							implemented engaging animations and transitions that significantly
@@ -97,8 +94,8 @@ const Experience: FC = () => {
 						</motion.p>
 						<motion.p
 							className={styles.workDescription}
-							variants={textOpacityAnimation}
-							custom={3}
+							variants={opacityAnimation}
+							custom={2.4}
 						>
 							<span className={styles.experienceColor}>Additionally </span>, I
 							developed web pages with integrated server requests to optimize

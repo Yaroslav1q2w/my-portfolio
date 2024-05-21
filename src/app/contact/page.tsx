@@ -14,9 +14,9 @@ import { IMyForm } from "@/types/form.types";
 import Textarea from "@/components/ui/textarea/Textarea";
 import { motion } from "framer-motion";
 import {
-	textAnimationRight,
-	textLeftAnimation,
-	textOpacityAnimation,
+	rightAnimation,
+	leftAnimation,
+	opacityAnimation,
 } from "@/animations/animations";
 
 const Contact: FC = () => {
@@ -33,13 +33,13 @@ const Contact: FC = () => {
 	return (
 		<motion.div className={styles.contact} initial="hidden" animate="visible">
 			<div className={styles.contactInfo}>
-				<motion.div className={styles.left} variants={textLeftAnimation}>
+				<motion.div className={styles.left} variants={leftAnimation}>
 					<h2 className={styles.title}>Contact Us.</h2>
 					<p className={styles.text}>
 						Feel free to reach out to us through any of the following platforms:
 					</p>
 				</motion.div>
-				<motion.div className={styles.icons} variants={textAnimationRight}>
+				<motion.div className={styles.icons} variants={rightAnimation}>
 					<a
 						href="https://www.linkedin.com/in/yaroslav-kucherenko-500783263/"
 						target="_blank"
@@ -86,7 +86,7 @@ const Contact: FC = () => {
 				<motion.div
 					className={styles.innerForm}
 					custom={1}
-					variants={textOpacityAnimation}
+					variants={opacityAnimation}
 				>
 					<h2 className={styles.formTitle}>Send me an email</h2>
 

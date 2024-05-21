@@ -8,13 +8,15 @@ import { motion, useInView } from "framer-motion";
 import {
 	containerListAnimation,
 	listAnimation,
-	textTopAnimation,
+	topAnimation,
 } from "@/animations/animations";
+import Modal from "@/components/ui/modal/Modal";
 
 const MyWork: FC = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 	const [startAnimation, setStartAnimation] = useState(false);
+	const [selectedId, setSelectedId] = useState<string | null>(null);
 
 	useEffect(() => {
 		if (isInView) {
@@ -23,6 +25,8 @@ const MyWork: FC = () => {
 	}, [isInView]);
 
 	const firstThreeProjects = projects.slice(0, 3);
+	const selectedProject =
+		projects.find((project) => project.id === selectedId) ?? null;
 
 	return (
 		<motion.div
@@ -31,22 +35,26 @@ const MyWork: FC = () => {
 			initial="hidden"
 			animate={startAnimation ? "visible" : "hidden"}
 		>
-			<motion.div
-				className={styles.inner}
-				variants={textTopAnimation}
-				custom={0.8}
-			>
+			<motion.div className={styles.inner} variants={topAnimation} custom={0.8}>
 				<motion.h2 className={styles.title}>SOME OF MY LATEST WORK</motion.h2>
 				<motion.div
 					className={styles.projects}
 					variants={containerListAnimation}
 				>
 					{firstThreeProjects.map((project) => (
-						<motion.div key={project.projectName} variants={listAnimation}>
+						<motion.div
+							key={project.id}
+							variants={listAnimation}
+							layoutId={project.id}
+							onClick={() => setSelectedId(project.id)}
+						>
 							<ProjectItem
+								id={project.id}
 								url={project.url}
 								imageSrc={project.imageSrc}
 								projectName={project.projectName}
+								technologies={[]}
+								features={[]}
 							/>
 						</motion.div>
 					))}
@@ -54,12 +62,18 @@ const MyWork: FC = () => {
 
 				<motion.div
 					className={styles.moreInfo}
-					variants={textTopAnimation}
+					variants={topAnimation}
 					custom={0.8}
 				>
 					If you want to see more projects, please visit the "Projects" page.
 				</motion.div>
 			</motion.div>
+
+			<Modal
+				isOpen={!!selectedId}
+				onClose={() => setSelectedId(null)}
+				project={selectedProject}
+			/>
 		</motion.div>
 	);
 };

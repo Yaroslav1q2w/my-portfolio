@@ -5,19 +5,13 @@ import styles from "./About.module.scss";
 import profileImage from "../../../public/IMG_6690.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-	imageAnimationLeft,
-	textAnimationRight,
-} from "@/animations/animations";
+import { leftAnimation, rightAnimation } from "@/animations/animations";
 
 const About: FC = () => {
 	return (
 		<motion.div className={styles.container} initial="hidden" animate="visible">
 			<motion.div className={styles.innerBlock}>
-				<motion.div
-					className={styles.imageContainer}
-					variants={imageAnimationLeft}
-				>
+				<motion.div className={styles.imageContainer} variants={leftAnimation}>
 					<Image
 						src={profileImage}
 						alt="about-img"
@@ -28,14 +22,14 @@ const About: FC = () => {
 				<motion.div className={styles.content}>
 					<motion.h2
 						className={styles.title}
-						variants={textAnimationRight}
+						variants={rightAnimation}
 						custom={0}
 					>
 						About Me.
 					</motion.h2>
 					<motion.p
 						className={styles.text}
-						variants={textAnimationRight}
+						variants={rightAnimation}
 						custom={0.2}
 					>
 						As a frontend developer with a deep passion for creating dynamic web
@@ -47,7 +41,7 @@ const About: FC = () => {
 					</motion.p>
 					<motion.p
 						className={styles.text}
-						variants={textAnimationRight}
+						variants={rightAnimation}
 						custom={0.4}
 					>
 						In my professional development, I am constantly progressing and

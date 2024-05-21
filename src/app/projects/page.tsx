@@ -8,22 +8,27 @@ import webMin from "../../../public/WEB-min.png";
 import { projects } from "./projects.data";
 import { motion, useInView } from "framer-motion";
 import {
-	textLeftAnimation,
-	imageAnimationRight,
+	leftAnimation,
+	rightAnimation,
 	containerListAnimation,
 	listAnimation,
 } from "../../animations/animations";
+import Modal from "@/components/ui/modal/Modal";
 
 const Projects: FC = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 	const [startAnimation, setStartAnimation] = useState(false);
+	const [selectedId, setSelectedId] = useState<string | null>(null);
 
 	useEffect(() => {
 		if (isInView) {
 			setStartAnimation(true);
 		}
 	}, [isInView]);
+
+	const selectedProject =
+		projects.find((project) => project.id === selectedId) ?? null;
 
 	return (
 		<motion.div className={styles.wrapper} initial="hidden" animate="visible">
@@ -33,10 +38,7 @@ const Projects: FC = () => {
 					initial="hidden"
 					animate="visible"
 				>
-					<motion.div
-						className={styles.textSection}
-						variants={textLeftAnimation}
-					>
+					<motion.div className={styles.textSection} variants={leftAnimation}>
 						<h2 className={styles.title}>Projects.</h2>
 						<p className={styles.text}>
 							Welcome to the Projects section! Here you can explore my latest
@@ -46,10 +48,7 @@ const Projects: FC = () => {
 						</p>
 					</motion.div>
 
-					<motion.div
-						className={styles.imageSection}
-						variants={imageAnimationRight}
-					>
+					<motion.div className={styles.imageSection} variants={rightAnimation}>
 						<Image
 							src={webMin}
 							alt="Project"
@@ -70,8 +69,14 @@ const Projects: FC = () => {
 						ref={ref}
 					>
 						{projects.map((project) => (
-							<motion.div key={project.projectName} variants={listAnimation}>
+							<motion.div
+								key={project.id}
+								variants={listAnimation}
+								layoutId={project.id}
+								onClick={() => setSelectedId(project.id)}
+							>
 								<ProjectItem
+									id={project.id}
 									imageSrc={project.imageSrc}
 									projectName={project.projectName}
 									url={project.url}
@@ -81,6 +86,12 @@ const Projects: FC = () => {
 					</motion.div>
 				</div>
 			</div>
+
+			<Modal
+				isOpen={!!selectedId}
+				onClose={() => setSelectedId(null)}
+				project={selectedProject}
+			/>
 		</motion.div>
 	);
 };
