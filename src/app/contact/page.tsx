@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import {
 	FaLinkedinIn,
 	FaGithub,
@@ -18,16 +18,35 @@ import {
 	leftAnimation,
 	opacityAnimation,
 } from "@/animations/animations";
+import { init, send } from "emailjs-com";
+import SuccessPopup from "@/components/ui/SuccessPopup/SuccessPopup";
+
+init("9VFiCnV0zpHAtARGe");
 
 const Contact: FC = () => {
+	const [showPopup, setShowPopup] = useState(false);
+
 	const {
 		register,
 		handleSubmit,
+		reset,
 		formState: { errors },
 	} = useForm<IMyForm>();
 
-	const onSubmit: SubmitHandler<IMyForm> = (data) => {
-		console.log(data);
+	const onSubmit: SubmitHandler<IMyForm> = async (data) => {
+		const templateParams = {
+			name: data.name,
+			email: data.email,
+			message: data.message,
+		};
+
+		try {
+			await send("service_v9pkoei", "template_yt45lj9", templateParams);
+			reset();
+			setShowPopup(true);
+		} catch (error) {
+			console.error("Error sending email:", error);
+		}
 	};
 
 	return (
@@ -98,7 +117,7 @@ const Contact: FC = () => {
 								register={register}
 								type="text"
 								registerOptions={{ required: "Name is required" }}
-								errors={errors.name}
+								errors={errors}
 							/>
 
 							<Field
@@ -113,7 +132,7 @@ const Contact: FC = () => {
 										message: "Invalid email address",
 									},
 								}}
-								errors={errors.email}
+								errors={errors}
 							/>
 						</div>
 
@@ -123,7 +142,7 @@ const Contact: FC = () => {
 								placeholder="Message"
 								register={register}
 								registerOptions={{ required: "Message is required" }}
-								errors={errors.message}
+								errors={errors}
 							/>
 						</div>
 
@@ -133,6 +152,13 @@ const Contact: FC = () => {
 					</form>
 				</motion.div>
 			</div>
+
+			{showPopup && (
+				<SuccessPopup
+					message="Thank you for your message! I'll get back to you as soon as possible."
+					onClose={() => setShowPopup(false)}
+				/>
+			)}
 		</motion.div>
 	);
 };
