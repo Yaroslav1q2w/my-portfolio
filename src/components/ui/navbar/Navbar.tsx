@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import cn from "clsx";
 import { motion } from "framer-motion";
 import { bottomAnimation } from "@/animations/animations";
+import MobileMenu from "../mobileMenu/MobileMenu";
 
 const Navbar: FC = () => {
 	const pathname = usePathname();
@@ -37,6 +38,7 @@ const Navbar: FC = () => {
 						</Link>
 					))}
 				</nav>
+				<MobileMenu />
 			</motion.div>
 		</header>
 	);

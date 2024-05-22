@@ -2,7 +2,7 @@ import { FC } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdCloseCircle } from "react-icons/io";
 import styles from "./Modal.module.scss";
-import { opacityAnimation, topAnimation } from "@/animations/animations";
+import { opacityAnimation } from "@/animations/animations";
 
 interface ModalProps {
 	isOpen: boolean;
