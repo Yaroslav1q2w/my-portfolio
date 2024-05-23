@@ -80,6 +80,8 @@ const Projects: FC = () => {
 									imageSrc={project.imageSrc}
 									projectName={project.projectName}
 									url={project.url}
+									technologies={project.technologies}
+									features={project.features}
 								/>
 							</motion.div>
 						))}

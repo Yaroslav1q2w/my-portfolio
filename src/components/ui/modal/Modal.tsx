@@ -3,24 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdCloseCircle } from "react-icons/io";
 import styles from "./Modal.module.scss";
 import { opacityAnimation } from "@/animations/animations";
+import { IProjectItem } from "@/types/projectItem.types";
 
 interface ModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	project: {
-		id: string;
-		imageSrc: string;
-		projectName: string;
-		url: string;
-		technologies: string[];
-		features: string[];
-	} | null;
+	project: IProjectItem | null;
 }
 
 const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
 	const handleModalClick = (e: React.MouseEvent<HTMLDivElement>) => {
 		e.stopPropagation();
 	};
+
+	if (!project) return null;
 
 	return (
 		<AnimatePresence>

@@ -53,8 +53,8 @@ const MyWork: FC = () => {
 								url={project.url}
 								imageSrc={project.imageSrc}
 								projectName={project.projectName}
-								technologies={[]}
-								features={[]}
+								technologies={project.technologies}
+								features={project.features}
 							/>
 						</motion.div>
 					))}
