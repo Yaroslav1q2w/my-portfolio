@@ -52,13 +52,21 @@ const Contact: FC = () => {
 	return (
 		<motion.div className={styles.contact} initial="hidden" animate="visible">
 			<div className={styles.contactInfo}>
-				<motion.div className={styles.left} variants={leftAnimation}>
+				<motion.div
+					className={styles.left}
+					variants={leftAnimation}
+					custom={0.5}
+				>
 					<h2 className={styles.title}>Contact Us.</h2>
 					<p className={styles.text}>
 						Feel free to reach out to us through any of the following platforms:
 					</p>
 				</motion.div>
-				<motion.div className={styles.icons} variants={rightAnimation}>
+				<motion.div
+					className={styles.icons}
+					variants={rightAnimation}
+					custom={0.5}
+				>
 					<a
 						href="https://www.linkedin.com/in/yaroslav-kucherenko-500783263/"
 						target="_blank"
@@ -104,7 +112,7 @@ const Contact: FC = () => {
 			<div className={styles.contactForm}>
 				<motion.div
 					className={styles.innerForm}
-					custom={1}
+					custom={1.5}
 					variants={opacityAnimation}
 				>
 					<h2 className={styles.formTitle}>Send me an email</h2>

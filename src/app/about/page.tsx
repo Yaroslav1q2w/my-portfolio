@@ -11,7 +11,11 @@ const About: FC = () => {
 	return (
 		<motion.div className={styles.container} initial="hidden" animate="visible">
 			<motion.div className={styles.innerBlock}>
-				<motion.div className={styles.imageContainer} variants={leftAnimation}>
+				<motion.div
+					className={styles.imageContainer}
+					variants={leftAnimation}
+					custom={0.6}
+				>
 					<Image
 						src={profileImage}
 						alt="about-img"
@@ -23,14 +27,14 @@ const About: FC = () => {
 					<motion.h2
 						className={styles.title}
 						variants={rightAnimation}
-						custom={0}
+						custom={0.5}
 					>
 						About Me.
 					</motion.h2>
 					<motion.p
 						className={styles.text}
 						variants={rightAnimation}
-						custom={0.2}
+						custom={0.6}
 					>
 						As a frontend developer with a deep passion for creating dynamic web
 						applications, I specialize in using cutting-edge technologies and
@@ -42,7 +46,7 @@ const About: FC = () => {
 					<motion.p
 						className={styles.text}
 						variants={rightAnimation}
-						custom={0.4}
+						custom={0.7}
 					>
 						In my professional development, I am constantly progressing and
 						refining my skills. I enjoy setting myself new challenges and

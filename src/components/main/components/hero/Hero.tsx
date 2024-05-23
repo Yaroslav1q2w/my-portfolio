@@ -21,21 +21,21 @@ const Hero: FC = () => {
 				>
 					<motion.h1
 						className={styles.heroTitle}
-						custom={0}
+						custom={0.5}
 						variants={leftAnimation}
 					>
 						I'm Yaroslav Kucherenko
 					</motion.h1>
 					<motion.h1
 						className={styles.heroTitle}
-						custom={0.2}
+						custom={0.6}
 						variants={leftAnimation}
 					>
 						Frontend Web Developer
 					</motion.h1>
 					<motion.p
 						className={styles.heroText}
-						custom={0.4}
+						custom={0.7}
 						variants={leftAnimation}
 					>
 						Front end developer who writes clean, elegant and efficient code.
@@ -48,6 +48,7 @@ const Hero: FC = () => {
 					initial="hidden"
 					animate="visible"
 					variants={rightAnimation}
+					custom={0.6}
 				>
 					<Image
 						className={styles.heroImg}

@@ -38,7 +38,11 @@ const Projects: FC = () => {
 					initial="hidden"
 					animate="visible"
 				>
-					<motion.div className={styles.textSection} variants={leftAnimation}>
+					<motion.div
+						className={styles.textSection}
+						variants={leftAnimation}
+						custom={0.5}
+					>
 						<h2 className={styles.title}>Projects.</h2>
 						<p className={styles.text}>
 							Welcome to the Projects section! Here you can explore my latest
@@ -48,7 +52,11 @@ const Projects: FC = () => {
 						</p>
 					</motion.div>
 
-					<motion.div className={styles.imageSection} variants={rightAnimation}>
+					<motion.div
+						className={styles.imageSection}
+						variants={rightAnimation}
+						custom={0.5}
+					>
 						<Image
 							src={webMin}
 							alt="Project"
