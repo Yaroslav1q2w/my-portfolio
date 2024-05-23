@@ -3,7 +3,8 @@
 import { FC } from "react";
 import styles from "./Hero.module.scss";
 import Image from "next/image";
-import heroImg from "../../../../../public/IMG_6690.jpg";
+import heroImg from "../../../../../public/IMG_6801.png";
+
 import { motion } from "framer-motion";
 import {
 	leftAnimation,

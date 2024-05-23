@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import styles from "./About.module.scss";
-import profileImage from "../../../public/IMG_6690.jpg";
+import profileImage from "../../../public/IMG_5559-min.jpeg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { leftAnimation, rightAnimation } from "@/animations/animations";

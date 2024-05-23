@@ -24,18 +24,31 @@ export const projects: IProjectItem[] = [
 			"Redux Thunk",
 			"Formik",
 			"Yup",
-			"SCSS",
 			"Styled-Components",
+			"react-icons",
 			"Node.js",
 			"Express.js",
 			"MongoDB",
 		],
 		features: [
-			"The 'Game store' project is an online store with comprehensive functionality and its own backend and database, which ensures smooth operation and convenient data management. It is implemented using modern technologies such as React, Redux, Node.js, Express.js, MongoDB and others.",
+			"Unfortunately, due to free hosting, data may take a little longer to download. Thank you for your understanding and patience!",
 
-			"The user authentication and registration system is implemented using JWT and bcrypt tokens to ensure data security. The functionality of filtering and dividing into product pages facilitates the search and promotes user convenience. The automated order creation system with integration into the database allows for quick and efficient order processing.",
+			"The 'Game store' project is an online store of computer games with full functionality and its own backend and database. It is implemented using modern technologies such as React, Redux, Node.js, Express.js and MongoDB, which ensures its smooth operation and convenient data management.",
 
-			"An admin panel where you can view users, orders, products and also the ability to add a product to the database. Users can create personal accounts to conveniently track the status of their orders and view their purchase history.",
+			"The main functionalities of the project include:",
+
+			"An authentication and user registration system using JWT and bcrypt tokens has been implemented to ensure data security.",
+
+			"The functionality of filtering products according to various criteria and dividing them into pages has been implemented to facilitate the search and convenience of users.",
+
+			"An integrated system of automated creation of orders with integration into the database, which allows you to quickly and efficiently process orders.",
+
+			"An admin panel has been developed, where the admin can view information about users, products and orders, as well as add new products to the database. All data is absolutely stored on the backend, and when a new product is added, it is automatically entered into the database.",
+
+			"Implemented the ability of users to create personal accounts to conveniently track the status of their orders and view purchase history. The user can log in, place an order and view his orders in his personal account.",
+			"The project is fully adapted for different devices and screen sizes, which ensures comfortable use of it on any devices.",
+
+			"The project is successfully implemented and uses technologies such as TypeScript, React, Redux Toolkit, React Router, Redux Thunk, Formik, Yup, SCSS, Styled-Components, Node.js, Express.js and MongoDB.",
 		],
 	},
 	{
