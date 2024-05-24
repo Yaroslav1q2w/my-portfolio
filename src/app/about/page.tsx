@@ -14,7 +14,7 @@ const About: FC = () => {
 				<motion.div
 					className={styles.imageContainer}
 					variants={leftAnimation}
-					custom={0.6}
+					custom={0.3}
 				>
 					<Image
 						src={profileImage}
@@ -27,14 +27,14 @@ const About: FC = () => {
 					<motion.h2
 						className={styles.title}
 						variants={rightAnimation}
-						custom={0.5}
+						custom={0.3}
 					>
 						About Me.
 					</motion.h2>
 					<motion.p
 						className={styles.text}
 						variants={rightAnimation}
-						custom={0.6}
+						custom={0.4}
 					>
 						As a frontend developer with a deep passion for creating dynamic web
 						applications, I specialize in using cutting-edge technologies and
@@ -46,7 +46,7 @@ const About: FC = () => {
 					<motion.p
 						className={styles.text}
 						variants={rightAnimation}
-						custom={0.7}
+						custom={0.5}
 					>
 						In my professional development, I am constantly progressing and
 						refining my skills. I enjoy setting myself new challenges and

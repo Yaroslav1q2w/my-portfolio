@@ -4,7 +4,7 @@ export const leftAnimation = {
 		x: 0,
 		opacity: 1,
 		transition: {
-			duration: 0.6,
+			duration: 0.5,
 			delay: delay,
 		},
 	}),
@@ -16,7 +16,7 @@ export const rightAnimation = {
 		opacity: 1,
 		x: 0,
 		transition: {
-			duration: 0.6,
+			duration: 0.5,
 			delay: delay,
 		},
 	}),
@@ -51,7 +51,7 @@ export const bottomAnimation = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 0.8,
+			duration: 0.6,
 			delay: delay,
 		},
 	}),

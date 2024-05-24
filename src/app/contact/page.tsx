@@ -17,6 +17,8 @@ import {
 	rightAnimation,
 	leftAnimation,
 	opacityAnimation,
+	topAnimation,
+	bottomAnimation,
 } from "@/animations/animations";
 import { init, send } from "emailjs-com";
 import SuccessPopup from "@/components/ui/SuccessPopup/SuccessPopup";
@@ -55,9 +57,9 @@ const Contact: FC = () => {
 				<motion.div
 					className={styles.left}
 					variants={leftAnimation}
-					custom={0.5}
+					custom={0.3}
 				>
-					<h2 className={styles.title}>Contact Us.</h2>
+					<h2 className={styles.title}>Contact Me.</h2>
 					<p className={styles.text}>
 						Feel free to reach out to us through any of the following platforms:
 					</p>
@@ -65,7 +67,7 @@ const Contact: FC = () => {
 				<motion.div
 					className={styles.icons}
 					variants={rightAnimation}
-					custom={0.5}
+					custom={0.3}
 				>
 					<a
 						href="https://www.linkedin.com/in/yaroslav-kucherenko-500783263/"
@@ -110,14 +112,21 @@ const Contact: FC = () => {
 				</motion.div>
 			</div>
 			<div className={styles.contactForm}>
-				<motion.div
-					className={styles.innerForm}
-					custom={1.5}
-					variants={opacityAnimation}
-				>
-					<h2 className={styles.formTitle}>Send me an email</h2>
+				<div className={styles.innerForm}>
+					<motion.h2
+						className={styles.formTitle}
+						variants={bottomAnimation}
+						custom={0.3}
+					>
+						Send me an email
+					</motion.h2>
 
-					<form className={styles.formWrap} onSubmit={handleSubmit(onSubmit)}>
+					<motion.form
+						className={styles.formWrap}
+						onSubmit={handleSubmit(onSubmit)}
+						variants={opacityAnimation}
+						custom={0.8}
+					>
 						<div className={styles.leftForm}>
 							<Field
 								name="name"
@@ -157,8 +166,8 @@ const Contact: FC = () => {
 						<button type="submit" className={styles.formButton}>
 							Send email
 						</button>
-					</form>
-				</motion.div>
+					</motion.form>
+				</div>
 			</div>
 
 			{showPopup && (

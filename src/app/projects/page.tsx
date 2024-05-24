@@ -41,7 +41,7 @@ const Projects: FC = () => {
 					<motion.div
 						className={styles.textSection}
 						variants={leftAnimation}
-						custom={0.5}
+						custom={0.3}
 					>
 						<h2 className={styles.title}>Projects.</h2>
 						<p className={styles.text}>
@@ -55,7 +55,7 @@ const Projects: FC = () => {
 					<motion.div
 						className={styles.imageSection}
 						variants={rightAnimation}
-						custom={0.5}
+						custom={0.3}
 					>
 						<Image
 							src={webMin}
