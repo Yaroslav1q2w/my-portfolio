@@ -49,7 +49,12 @@
 
 		.heroImg {
 			height: auto;
-			max-width: 500px;
+			max-width: 400px;
+			filter: drop-shadow(0px 0px 10px #848484) grayscale(70%);
+
+			@media (max-width: 600px) {
+				width: 100%;
+			}
 		}
 	}
 }
