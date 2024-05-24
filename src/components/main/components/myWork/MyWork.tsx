@@ -35,7 +35,7 @@ const MyWork: FC = () => {
 			initial="hidden"
 			animate={startAnimation ? "visible" : "hidden"}
 		>
-			<motion.div className={styles.inner} variants={topAnimation} custom={0.8}>
+			<motion.div className={styles.inner} variants={topAnimation} custom={0.4}>
 				<motion.h2 className={styles.title}>SOME OF MY LATEST WORK</motion.h2>
 				<motion.div
 					className={styles.projects}
@@ -63,7 +63,7 @@ const MyWork: FC = () => {
 				<motion.div
 					className={styles.moreInfo}
 					variants={topAnimation}
-					custom={0.8}
+					custom={0.4}
 				>
 					If you want to see more projects, please visit the "Projects" page.
 				</motion.div>

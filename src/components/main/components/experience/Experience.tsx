@@ -30,28 +30,28 @@ const Experience: FC = () => {
 					<motion.h1
 						className={styles.experienceTitle}
 						variants={opacityAnimation}
-						custom={1}
+						custom={0.2}
 					>
 						My Professional Experience
 					</motion.h1>
 					<motion.h2
 						className={styles.companyName}
 						variants={opacityAnimation}
-						custom={1.2}
+						custom={0.4}
 					>
 						WhoCPA
 					</motion.h2>
 					<motion.p
 						className={styles.workDuration}
 						variants={opacityAnimation}
-						custom={1.4}
+						custom={0.6}
 					>
 						Frontend Developer
 					</motion.p>
 					<motion.p
 						className={styles.workDuration}
 						variants={opacityAnimation}
-						custom={1.6}
+						custom={0.8}
 					>
 						December 2022 - March 2024
 					</motion.p>
@@ -60,7 +60,7 @@ const Experience: FC = () => {
 				<motion.div className={styles.experienceContent}>
 					<motion.div
 						variants={leftAnimation}
-						custom={2}
+						custom={0.8}
 						className={styles.imageWrapper}
 					>
 						<Image
@@ -73,7 +73,7 @@ const Experience: FC = () => {
 						<motion.p
 							className={styles.workDescription}
 							variants={opacityAnimation}
-							custom={2}
+							custom={1}
 						>
 							<span className={styles.experienceColor}>
 								As a frontend developer
@@ -87,7 +87,7 @@ const Experience: FC = () => {
 						<motion.p
 							className={styles.workDescription}
 							variants={opacityAnimation}
-							custom={2.2}
+							custom={1.2}
 						>
 							<span className={styles.experienceColor}>I effectively </span>
 							implemented engaging animations and transitions that significantly
@@ -99,7 +99,7 @@ const Experience: FC = () => {
 						<motion.p
 							className={styles.workDescription}
 							variants={opacityAnimation}
-							custom={2.4}
+							custom={1.4}
 						>
 							<span className={styles.experienceColor}>Additionally </span>, I
 							developed web pages with integrated server requests to optimize

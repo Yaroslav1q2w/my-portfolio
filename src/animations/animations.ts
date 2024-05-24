@@ -62,7 +62,7 @@ export const containerListAnimation = {
 	visible: {
 		opacity: 1,
 		transition: {
-			delayChildren: 1,
+			delayChildren: 0.2,
 			staggerChildren: 0.2,
 		},
 	},
