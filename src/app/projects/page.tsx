@@ -36,13 +36,11 @@ const Projects: FC = () => {
 				<motion.div
 					className={styles.headerSection}
 					initial="hidden"
-					animate="visible"
-				>
+					animate="visible">
 					<motion.div
 						className={styles.textSection}
 						variants={leftAnimation}
-						custom={0.3}
-					>
+						custom={0.3}>
 						<h2 className={styles.title}>Projects.</h2>
 						<p className={styles.text}>
 							Welcome to the Projects section! Here you can explore my latest
@@ -55,8 +53,7 @@ const Projects: FC = () => {
 					<motion.div
 						className={styles.imageSection}
 						variants={rightAnimation}
-						custom={0.3}
-					>
+						custom={0.3}>
 						<Image
 							src={webMin}
 							alt="Project"
@@ -74,15 +71,13 @@ const Projects: FC = () => {
 						variants={containerListAnimation}
 						initial="hidden"
 						animate={startAnimation ? "visible" : "hidden"}
-						ref={ref}
-					>
+						ref={ref}>
 						{projects.map((project) => (
 							<motion.div
 								key={project.id}
 								variants={listAnimation}
 								layoutId={project.id}
-								onClick={() => setSelectedId(project.id)}
-							>
+								onClick={() => setSelectedId(project.id)}>
 								<ProjectItem
 									id={project.id}
 									imageSrc={project.imageSrc}

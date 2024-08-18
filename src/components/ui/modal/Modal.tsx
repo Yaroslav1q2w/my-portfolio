@@ -26,24 +26,21 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
-					onClick={onClose}
-				>
+					onClick={onClose}>
 					<motion.div
 						className={styles.modal}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
 						layoutId={project.id}
-						initial={{ y: 50, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						exit={{ y: 50, opacity: 0 }}
-						onClick={handleModalClick}
-					>
+						onClick={handleModalClick}>
 						<motion.button
 							onClick={onClose}
 							className={styles.closeButton}
 							variants={opacityAnimation}
 							initial="hidden"
 							animate="visible"
-							custom={0.6}
-						>
+							custom={0.6}>
 							<IoMdCloseCircle />
 						</motion.button>
 						<motion.div className={styles.projectDetails}>
@@ -75,8 +72,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, project }) => {
 								rel="noopener noreferrer"
 								className={styles.projectLink}
 								whileHover={{ scale: 1.1 }}
-								transition={{ type: "spring", stiffness: 400, damping: 8 }}
-							>
+								transition={{ type: "spring", stiffness: 400, damping: 8 }}>
 								Visit Project
 							</motion.a>
 						</motion.div>

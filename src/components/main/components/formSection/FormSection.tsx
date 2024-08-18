@@ -55,14 +55,12 @@ const FormSection: FC = () => {
 				ref={ref}
 				initial="hidden"
 				animate={startAnimation ? "visible" : "hidden"}
-				variants={formAnimations}
-			>
+				variants={formAnimations}>
 				<div className={styles.inner}>
 					<motion.div
 						className={styles.content}
 						variants={topAnimation}
-						custom={0.5}
-					>
+						custom={0.5}>
 						<h2 className={styles.title}>Have any questions?</h2>
 						<p className={styles.text}>
 							Feel free to drop us a message, and I'll get back to you as soon
@@ -72,8 +70,7 @@ const FormSection: FC = () => {
 					<motion.div
 						className={styles.form}
 						variants={topAnimation}
-						custom={0.6}
-					>
+						custom={0.6}>
 						<form className={styles.formElem} onSubmit={handleSubmit(onSubmit)}>
 							<div>
 								<Field

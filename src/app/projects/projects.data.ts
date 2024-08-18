@@ -9,6 +9,7 @@ import angularUsers from "../../../public/angular-users-min.png";
 import jadwalin from "../../../public/jadwalin-min.png";
 import forkApp from "../../../public/forkApp-min.png";
 import theHum from "../../../public/theHum-min.png";
+import dashboard from "../../../public/dashboard-min.png";
 
 export const projects: IProjectItem[] = [
 	{
@@ -117,6 +118,20 @@ export const projects: IProjectItem[] = [
 	},
 	{
 		id: "5",
+		imageSrc: dashboard,
+		projectName: "Admin Dashboard",
+		url: "https://dashboard-nine-azure.vercel.app/",
+		technologies: ["HTML", "CSS", "JavaScript", "Gulp", "SVG Sprite"],
+		features: [
+			"The 'Admin Dashboard' project is a comprehensive and user-friendly dashboard designed for managing customer data and various administrative tasks. The dashboard is fully responsive, ensuring smooth operation across all devices, including desktops, tablets, and smartphones.",
+
+			"Utilizing a clean and modern design, the dashboard includes features such as dynamic content loading, a sidebar navigation with active state indicators, and a customer table with pagination. This setup allows for efficient data management and a seamless user experience.",
+
+			"The project is built with the help of Gulp, a powerful task runner that automates common development tasks like CSS preprocessing, image optimization, and HTML formatting. These features ensure that the code remains clean, optimized, and easy to maintain.",
+		],
+	},
+	{
+		id: "6",
 		imageSrc: tarot,
 		projectName: "Tarot cards",
 		url: "https://starlit-starburst-6e6599.netlify.app/",
@@ -128,7 +143,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "6",
+		id: "7",
 		imageSrc: vueUsers,
 		projectName: "User Manager",
 		url: "https://jocular-alfajores-57de3d.netlify.app/",
@@ -152,7 +167,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "7",
+		id: "8",
 		imageSrc: angularUsers,
 		projectName: "Angular Users",
 		url: "https://users-app-angular-rose.vercel.app/angular-test-pages/",
@@ -175,7 +190,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "8",
+		id: "9",
 		imageSrc: jadwalin,
 		projectName: "Jadwalin",
 		url: "https://grand-dolphin-830d8b.netlify.app/",
@@ -200,7 +215,7 @@ export const projects: IProjectItem[] = [
 	},
 
 	{
-		id: "9",
+		id: "10",
 		imageSrc: forkApp,
 		projectName: "Fork App",
 		url: "https://tranquil-medovik-b374bd.netlify.app/",
@@ -216,7 +231,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "10",
+		id: "11",
 		imageSrc: theHum,
 		projectName: "The Hum",
 		url: "https://yaroslav1q2w.github.io/project-hum/",
