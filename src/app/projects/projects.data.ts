@@ -10,6 +10,7 @@ import jadwalin from "../../../public/jadwalin-min.png";
 import forkApp from "../../../public/forkApp-min.png";
 import theHum from "../../../public/theHum-min.png";
 import dashboard from "../../../public/dashboard-min.png";
+import mahaon from "../../../public/Mahaon.png";
 
 export const projects: IProjectItem[] = [
 	{
@@ -52,8 +53,46 @@ export const projects: IProjectItem[] = [
 			"The project is successfully implemented and uses technologies such as TypeScript, React, Redux Toolkit, React Router, Redux Thunk, Formik, Yup, SCSS, Styled-Components, Node.js, Express.js and MongoDB.",
 		],
 	},
+  {
+    id: "2",
+    imageSrc: mahaon, 
+    projectName: "Telegram Agency",
+    url: "https://vermillion-otter-c816b7.netlify.app/", 
+    technologies: [
+      "React",
+      "Redux Toolkit",
+      "React Hook Form",
+      "React Router",
+      "Styled Components",
+      "Swiper",
+      "TypeScript", 
+    ],
+    features: [
+      "The 'Telegram Agency' project is a web application for gathering client project briefs, designed to streamline the process of collecting requirements and specifications.",
+  
+      "The project guides users through a multi-step form where they can input details about their project needs, goals, target audience, timeline, and budget.",
+  
+      "Built with a clean, user-friendly UI, this application utilizes modern technologies such as React, Redux Toolkit, and Styled Components for efficient state management and styling. The main functionalities of the project include: Step-by-step form navigation that lets users progress through required fields to provide detailed project specifications. Client data validation at each step using React Hook Form and custom error handling to ensure accurate information entry. Selection options for services, goals, and target audience with the ability to choose multiple options, enhancing customization of the briefing process.",
+  
+      "A fully responsive design ensures the application is accessible on various devices and screen sizes, providing a seamless experience on mobile, tablet, and desktop. The project is built to be flexible and scalable, allowing potential integration with back-end services if needed. Utilizes technologies like React, Redux Toolkit, React Hook Form, Framer Motion for smooth animations, and Styled Components for modular, maintainable styling.",
+    ],
+  },
+  {
+		id: "3",
+		imageSrc: lendVita,
+		projectName: "Landing page",
+		url: "https://genuine-babka-434b6b.netlify.app/",
+		technologies: ["JavaScript", "CSS", "Swiper Slider"],
+		features: [
+			"The 'Landing page' project is a stylish and effective web page designed to present a product, service or informational material. The page is fully responsive, which means that it is optimized for viewing on any device, including computers, tablets and mobile phones.",
+
+			"Swipers (sliders) are used on the page to display important information or present images in an attractive and aesthetic way. This functionality allows users to quickly view content and get the information they need in a convenient and attractive way.",
+
+			"The presentation of the page is supported by constant updating and adaptation to the needs of users. This allows for comfortable use and interaction even when the screen size or device type changes. All these features help create an attractive and useful experience for web page visitors.",
+		],
+	},
 	{
-		id: "2",
+		id: "4",
 		imageSrc: georgianMenu,
 		projectName: "Georgian menu",
 		url: "https://geogrian-menu-gulp.vercel.app/",
@@ -80,21 +119,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "3",
-		imageSrc: lendVita,
-		projectName: "Landing page",
-		url: "https://genuine-babka-434b6b.netlify.app/",
-		technologies: ["JavaScript", "CSS", "Swiper Slider"],
-		features: [
-			"The 'Landing page' project is a stylish and effective web page designed to present a product, service or informational material. The page is fully responsive, which means that it is optimized for viewing on any device, including computers, tablets and mobile phones.",
-
-			"Swipers (sliders) are used on the page to display important information or present images in an attractive and aesthetic way. This functionality allows users to quickly view content and get the information they need in a convenient and attractive way.",
-
-			"The presentation of the page is supported by constant updating and adaptation to the needs of users. This allows for comfortable use and interaction even when the screen size or device type changes. All these features help create an attractive and useful experience for web page visitors.",
-		],
-	},
-	{
-		id: "4",
+		id: "5",
 		imageSrc: onlineShop,
 		projectName: "Сlothing store",
 		url: "https://online-shop-react-nine.vercel.app/",
@@ -117,7 +142,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "5",
+		id: "6",
 		imageSrc: dashboard,
 		projectName: "Admin Dashboard",
 		url: "https://dashboard-nine-azure.vercel.app/",
@@ -131,7 +156,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "6",
+		id: "7",
 		imageSrc: tarot,
 		projectName: "Tarot cards",
 		url: "https://starlit-starburst-6e6599.netlify.app/",
@@ -143,7 +168,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "7",
+		id: "8",
 		imageSrc: vueUsers,
 		projectName: "User Manager",
 		url: "https://jocular-alfajores-57de3d.netlify.app/",
@@ -167,7 +192,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "8",
+		id: "9",
 		imageSrc: angularUsers,
 		projectName: "Angular Users",
 		url: "https://users-app-angular-rose.vercel.app/angular-test-pages/",
@@ -190,7 +215,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "9",
+		id: "10",
 		imageSrc: jadwalin,
 		projectName: "Jadwalin",
 		url: "https://grand-dolphin-830d8b.netlify.app/",
@@ -215,7 +240,7 @@ export const projects: IProjectItem[] = [
 	},
 
 	{
-		id: "10",
+		id: "11",
 		imageSrc: forkApp,
 		projectName: "Fork App",
 		url: "https://tranquil-medovik-b374bd.netlify.app/",
@@ -231,7 +256,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "11",
+		id: "12",
 		imageSrc: theHum,
 		projectName: "The Hum",
 		url: "https://yaroslav1q2w.github.io/project-hum/",

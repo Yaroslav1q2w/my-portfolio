@@ -7,8 +7,8 @@ import {
 	SiBem,
 	SiMui,
 	SiStyledcomponents,
-	SiMobx,
 } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 import { BsFiletypeScss } from "react-icons/bs";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -18,7 +18,7 @@ export const technologies: ITech[] = [
 	{ name: "Redux", Icon: SiRedux },
 	{ name: "Next.js", Icon: RiNextjsFill },
 	{ name: "TypeScript", Icon: SiTypescript },
-	{ name: "MobX", Icon: SiMobx },
+	{ name: "React Native", Icon: TbBrandReactNative },
 	{ name: "SCSS", Icon: BsFiletypeScss },
 	{ name: "BEM", Icon: SiBem },
 	{ name: "Gulp", Icon: FaGulp },
