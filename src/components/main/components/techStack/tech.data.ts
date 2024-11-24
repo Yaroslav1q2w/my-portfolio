@@ -1,5 +1,5 @@
 import { ITech } from "@/types/tech.types";
-import { FaReact, FaGulp, FaGithub } from "react-icons/fa";
+import { FaReact, FaGulp, FaBootstrap } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
 	SiRedux,
@@ -24,5 +24,5 @@ export const technologies: ITech[] = [
 	{ name: "Gulp", Icon: FaGulp },
 	{ name: "MUI", Icon: SiMui },
 	{ name: "styled-components", Icon: SiStyledcomponents },
-	{ name: "Git", Icon: FaGithub },
+	{ name: "Bootstrap", Icon: FaBootstrap },
 ];

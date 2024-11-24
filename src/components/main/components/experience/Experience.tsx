@@ -5,7 +5,7 @@ import styles from "./Experience.module.scss";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import laptop from "../../../../../public/laptop.webp";
-import { leftAnimation, opacityAnimation } from "@/animations/animations";
+import { leftAnimation, opacityAnimation, rightAnimation } from "@/animations/animations";
 
 const Experience: FC = () => {
 	const ref = useRef(null);
@@ -25,33 +25,12 @@ const Experience: FC = () => {
 			initial="hidden"
 			animate={startAnimation ? "visible" : "hidden"}>
 			<motion.div className={styles.experienceInner}>
-				<motion.div className={styles.experienceHeader}>
-					<motion.h1
-						className={styles.experienceTitle}
-						variants={opacityAnimation}
-						custom={0.2}>
-						My Professional Experience
-					</motion.h1>
-					<motion.h2
-						className={styles.companyName}
-						variants={opacityAnimation}
-						custom={0.4}>
-						WhoCPA
-					</motion.h2>
-					<motion.p
-						className={styles.workDuration}
-						variants={opacityAnimation}
-						custom={0.6}>
-						Frontend Developer
-					</motion.p>
-					<motion.p
-						className={styles.workDuration}
-						variants={opacityAnimation}
-						custom={0.8}>
-						December 2022 - March 2024
-					</motion.p>
-				</motion.div>
-
+        <motion.h1
+          className={styles.experienceTitle}
+          variants={opacityAnimation}
+          custom={0.2}>
+          My Professional Experience
+        </motion.h1>
 				<motion.div className={styles.experienceContent}>
 					<motion.div
 						variants={leftAnimation}
@@ -63,47 +42,54 @@ const Experience: FC = () => {
 							className={styles.experienceImg}
 						/>
 					</motion.div>
-					<motion.div className={styles.experienceDetails}>
-						<motion.p
-							className={styles.workDescription}
-							variants={opacityAnimation}
-							custom={1}>
-							<span className={styles.experienceColor}>
-								As a frontend developer
-							</span>
-							, I specialized in developing responsive web pages for product
-							promotion, ensuring an optimized user experience across various
-							devices. My role involved full-cycle development—from the initial
-							concept to implementation—focusing on creating visually appealing
-							and highly functional interfaces.
-						</motion.p>
-						<motion.p
-							className={styles.workDescription}
-							variants={opacityAnimation}
-							custom={1.2}>
-							<span className={styles.experienceColor}>Depending </span> on
-							project requirements, I utilized a diverse set of technologies,
-							including React for dynamic, interactive applications, Gulp for
-							task automation, and SCSS for efficient styling. While working on
-							simpler projects, I relied on HTML, CSS, and JavaScript to create
-							fast and reliable web pages. For more complex, multi-page
-							websites, I implemented React to manage state and ensure smooth
-							interaction between components, often integrating API requests for
-							dynamic content loading and user-specific data display.
-						</motion.p>
-						<motion.p
-							className={styles.workDescription}
-							variants={opacityAnimation}
-							custom={1.4}>
-							<span className={styles.experienceColor}>In addition </span>, I
-							was responsible for implementing user-friendly interfaces and
-							incorporating interactive features such as forms and
-							questionnaires, which contributed to higher user engagement. My
-							approach to coding emphasized maintaining clean, scalable code
-							that adhered to modern web standards and performed consistently
-							across different browsers and devices.
-						</motion.p>
-					</motion.div>
+          <motion.div className={styles.experienceDetails}>
+            <motion.div className={styles.experienceItem}>
+              <motion.div className={styles.experienceHeader}>
+                <motion.h2
+                  className={styles.companyName}
+                  variants={rightAnimation}
+                  custom={0.4}>
+                  WhoCPA
+                </motion.h2>
+                <motion.p
+                  className={styles.workDuration}
+                  variants={rightAnimation}
+                  custom={0.6}>
+                  Frontend Developer, December 2022 - March 2024
+                </motion.p>
+              </motion.div>
+              <motion.p
+                className={styles.workDescription}
+                variants={rightAnimation}
+                custom={0.8}>
+                As a frontend developer, I created responsive web pages to ensure optimized user experiences across devices. I used technologies like React for interactive applications, Gulp for task automation, and SCSS for styling. For simpler projects, I relied on HTML, CSS, and JavaScript, while for complex websites, I used React to manage state and integrate APIs for dynamic content. I focused on building user-friendly interfaces and interactive features, maintaining clean, scalable code aligned with modern web standards.
+              </motion.p>
+            </motion.div>
+            <motion.div className={styles.experienceItem}>
+              <motion.div className={styles.experienceHeader}>
+                <motion.h2
+                  className={styles.companyName}
+                  variants={rightAnimation}
+                  custom={1}>
+                  VinAssessment
+                </motion.h2>
+                <motion.p
+                  className={styles.workDuration}
+                  variants={rightAnimation}
+                  custom={1.2}>
+                  Frontend Developer, August – Present
+                </motion.p>
+              </motion.div>
+              <motion.p
+                className={styles.workDescription}
+                variants={rightAnimation}
+                custom={1.4}>
+                Worked with a small team to develop the front-end for platforms built on Ruby on Rails, delivering detailed vehicle reports and enhancing the vehicle marketplace.
+                Platforms provide car dealers, retail customers, and marketplace users with vehicle valuations, ownership history, condition assessments, and detailed listings for various car types, including new, used, and auction vehicles.
+                Contributed to developing a React-based Chrome Extension, allowing users to access comprehensive vehicle reports directly in their browser.
+              </motion.p>
+            </motion.div>
+          </motion.div>
 				</motion.div>
 			</motion.div>
 		</motion.div>
