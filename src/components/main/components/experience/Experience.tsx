@@ -77,7 +77,7 @@ const Experience: FC = () => {
                   className={styles.workDuration}
                   variants={rightAnimation}
                   custom={1.2}>
-                  Frontend Developer, September – December
+                  Frontend Developer, September 2024 – January 2025
                 </motion.p>
               </motion.div>
               <motion.p
