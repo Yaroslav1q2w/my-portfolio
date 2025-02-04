@@ -9,6 +9,8 @@ import cn from "clsx";
 import { motion } from "framer-motion";
 import { bottomAnimation } from "@/animations/animations";
 import MobileMenu from "../mobileMenu/MobileMenu";
+import logoImg from "../../../../public/logo.png"
+import Image from "next/image";
 
 const Navbar: FC = () => {
 	const pathname = usePathname();
@@ -23,6 +25,12 @@ const Navbar: FC = () => {
 				custom={1}
 			>
 				<Link href="/" className={styles.navLogo}>
+        <Image
+						className={styles.logoImg}
+						src={logoImg}
+						alt="Logo"
+						// priority={true}
+					/>
 					Portfolio
 				</Link>
 				<nav className={styles.navList}>

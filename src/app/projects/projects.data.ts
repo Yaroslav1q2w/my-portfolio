@@ -11,6 +11,7 @@ import forkApp from "../../../public/forkApp-min.png";
 import theHum from "../../../public/theHum-min.png";
 import dashboard from "../../../public/dashboard-min.png";
 import mahaon from "../../../public/Mahaon.png";
+import chatAi from "../../../public/chatai.png";
 
 export const projects: IProjectItem[] = [
 	{
@@ -55,6 +56,36 @@ export const projects: IProjectItem[] = [
 	},
   {
     id: "2",
+    imageSrc: chatAi, 
+    projectName: "ChatAssistant",
+    url: "https://github.com/Yaroslav1q2w/ChatAssistantAI", 
+    technologies: [
+      "React Native",
+      "Expo",
+      "Expo Router",
+      "Context API",
+      "AsyncStorage",
+      "Tailwind CSS",
+      "Expo Fonts",
+      "Linear Gradient",
+      "TypeScript",
+    ],
+    features: [
+			"'ChatAssistant' is a pet project built on React Native using Expo, which allows you to create interactive chats with animated messages. The project implements the basic chat functionality, and also supports extensions using context and dynamic routing.",
+      "Users can create new chats and manage chat history locally using AsyncStorage.",
+      "Implemented animated bot responses with a typewriter effect for better interactivity.",
+      "Supports functionalities like sending messages, copying, and sharing messages.",
+      "Includes navigation tabs for Explore, Tasks, and History to organize app features.",
+      "Integrated Context API for managing chats and messages globally across the app.",
+      "Custom fonts loaded using Expo Fonts for a polished design.",
+      "Splash screen implemented with expo-splash-screen for a seamless app startup experience.",
+      "The project is fully responsive and styled with Tailwind CSS and linear gradients for a modern look.",
+      "Provides a strong foundation for extending functionalities like API integration or user authentication.",
+    ],
+  },
+  
+  {
+    id: "3",
     imageSrc: mahaon, 
     projectName: "Telegram Agency",
     url: "https://vermillion-otter-c816b7.netlify.app/", 
@@ -78,7 +109,7 @@ export const projects: IProjectItem[] = [
     ],
   },
   {
-		id: "3",
+		id: "4",
 		imageSrc: lendVita,
 		projectName: "Landing page",
 		url: "https://genuine-babka-434b6b.netlify.app/",
@@ -92,7 +123,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "4",
+		id: "5",
 		imageSrc: georgianMenu,
 		projectName: "Georgian menu",
 		url: "https://geogrian-menu-gulp.vercel.app/",
@@ -119,7 +150,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "5",
+		id: "6",
 		imageSrc: onlineShop,
 		projectName: "Сlothing store",
 		url: "https://online-shop-react-nine.vercel.app/",
@@ -142,7 +173,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "6",
+		id: "7",
 		imageSrc: dashboard,
 		projectName: "Admin Dashboard",
 		url: "https://dashboard-nine-azure.vercel.app/",
@@ -156,7 +187,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "7",
+		id: "8",
 		imageSrc: tarot,
 		projectName: "Tarot cards",
 		url: "https://starlit-starburst-6e6599.netlify.app/",
@@ -168,7 +199,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "8",
+		id: "9",
 		imageSrc: vueUsers,
 		projectName: "User Manager",
 		url: "https://jocular-alfajores-57de3d.netlify.app/",
@@ -192,7 +223,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "9",
+		id: "10",
 		imageSrc: angularUsers,
 		projectName: "Angular Users",
 		url: "https://users-app-angular-rose.vercel.app/angular-test-pages/",
@@ -215,7 +246,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "10",
+		id: "11",
 		imageSrc: jadwalin,
 		projectName: "Jadwalin",
 		url: "https://grand-dolphin-830d8b.netlify.app/",
@@ -240,7 +271,7 @@ export const projects: IProjectItem[] = [
 	},
 
 	{
-		id: "11",
+		id: "12",
 		imageSrc: forkApp,
 		projectName: "Fork App",
 		url: "https://tranquil-medovik-b374bd.netlify.app/",
@@ -256,7 +287,7 @@ export const projects: IProjectItem[] = [
 		],
 	},
 	{
-		id: "12",
+		id: "13",
 		imageSrc: theHum,
 		projectName: "The Hum",
 		url: "https://yaroslav1q2w.github.io/project-hum/",

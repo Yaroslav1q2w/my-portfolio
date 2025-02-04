@@ -49,20 +49,22 @@ const Experience: FC = () => {
                   className={styles.companyName}
                   variants={rightAnimation}
                   custom={0.4}>
-                  WhoCPA
+                  VinAssessment
                 </motion.h2>
                 <motion.p
                   className={styles.workDuration}
                   variants={rightAnimation}
                   custom={0.6}>
-                  Frontend Developer,  March 2023 – May 2024
+                  Frontend Developer, September 2024 – February 2025
                 </motion.p>
               </motion.div>
               <motion.p
                 className={styles.workDescription}
                 variants={rightAnimation}
                 custom={0.8}>
-                As a frontend developer, I created responsive web pages to ensure optimized user experiences across devices. I used technologies like React for interactive applications, Gulp for task automation, and SCSS for styling. For simpler projects, I relied on HTML, CSS, and JavaScript, while for complex websites, I used React to manage state and integrate APIs for dynamic content. I focused on building user-friendly interfaces and interactive features, maintaining clean, scalable code aligned with modern web standards.
+                Worked with a small team to develop the front-end for platforms built on Ruby on Rails, delivering detailed vehicle reports and enhancing the vehicle marketplace.
+                Platforms provide car dealers, retail customers, and marketplace users with vehicle valuations, ownership history, condition assessments, and detailed listings for various car types, including new, used, and auction vehicles.
+                Contributed to developing a React-based Chrome Extension, allowing users to access comprehensive vehicle reports directly in their browser.
               </motion.p>
             </motion.div>
             <motion.div className={styles.experienceItem}>
@@ -71,22 +73,20 @@ const Experience: FC = () => {
                   className={styles.companyName}
                   variants={rightAnimation}
                   custom={1}>
-                  VinAssessment
+                  WhoCPA
                 </motion.h2>
                 <motion.p
                   className={styles.workDuration}
                   variants={rightAnimation}
                   custom={1.2}>
-                  Frontend Developer, September 2024 – January 2025
+                  Frontend Developer,  March 2023 – May 2024
                 </motion.p>
               </motion.div>
               <motion.p
                 className={styles.workDescription}
                 variants={rightAnimation}
                 custom={1.4}>
-                Worked with a small team to develop the front-end for platforms built on Ruby on Rails, delivering detailed vehicle reports and enhancing the vehicle marketplace.
-                Platforms provide car dealers, retail customers, and marketplace users with vehicle valuations, ownership history, condition assessments, and detailed listings for various car types, including new, used, and auction vehicles.
-                Contributed to developing a React-based Chrome Extension, allowing users to access comprehensive vehicle reports directly in their browser.
+                As a frontend developer, I created responsive web pages to ensure optimized user experiences across devices. I used technologies like React for interactive applications, Gulp for task automation, and SCSS for styling. For simpler projects, I relied on HTML, CSS, and JavaScript, while for complex websites, I used React to manage state and integrate APIs for dynamic content. I focused on building user-friendly interfaces and interactive features, maintaining clean, scalable code aligned with modern web standards.
               </motion.p>
             </motion.div>
           </motion.div>

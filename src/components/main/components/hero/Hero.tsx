@@ -6,10 +6,7 @@ import Image from "next/image";
 import heroImg from "../../../../../public/IMG_6801.png";
 
 import { motion } from "framer-motion";
-import {
-	leftAnimation,
-	rightAnimation,
-} from "../../../../animations/animations";
+import { leftAnimation, rightAnimation } from "@/animations/animations";
 
 const Hero: FC = () => {
 	return (
