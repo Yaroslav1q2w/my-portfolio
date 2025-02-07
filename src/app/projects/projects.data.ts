@@ -198,30 +198,30 @@ export const projects: IProjectItem[] = [
 			"The main page of the project contains a title and a description that tells about the purpose and purpose of the service. The user can click the 'Shuffle' button to shuffle the deck of cards and start the session. The card set includes 20 cards and their images. After each click of the 'Shuffle' button , the cards are randomly shuffled, which ensures variety and interest in each session.",
 		],
 	},
-	{
-		id: "9",
-		imageSrc: vueUsers,
-		projectName: "User Manager",
-		url: "https://jocular-alfajores-57de3d.netlify.app/",
-		technologies: [
-			"Vue.js",
-			"Vuex",
-			"Vue Router",
-			"Axios",
-			"HTML",
-			"CSS",
-			"JavaScript",
-		],
-		features: [
-			"The 'User Manager' project is a web-based user management application that allows you to effectively manage user data, including adding, editing and deleting records.",
+	// {
+	// 	id: "9",
+	// 	imageSrc: vueUsers,
+	// 	projectName: "User Manager",
+	// 	url: "https://jocular-alfajores-57de3d.netlify.app/",
+	// 	technologies: [
+	// 		"Vue.js",
+	// 		"Vuex",
+	// 		"Vue Router",
+	// 		"Axios",
+	// 		"HTML",
+	// 		"CSS",
+	// 		"JavaScript",
+	// 	],
+	// 	features: [
+	// 		"The 'User Manager' project is a web-based user management application that allows you to effectively manage user data, including adding, editing and deleting records.",
 
-			"The main functionality of the application includes obtaining a list of users by means of a request to an external API, which allows you to ensure that the data is up-to-date. Users can be added to the list through a form.",
+	// 		"The main functionality of the application includes obtaining a list of users by means of a request to an external API, which allows you to ensure that the data is up-to-date. Users can be added to the list through a form.",
 
-			"The application has the ability to search and filter users based on the entered query, which allows you to quickly find the desired user. There is also a functionality for editing user data, which allows you to update information directly through a modal window.",
+	// 		"The application has the ability to search and filter users based on the entered query, which allows you to quickly find the desired user. There is also a functionality for editing user data, which allows you to update information directly through a modal window.",
 
-			"The application interface provides convenient navigation and management using modern technologies such as Vue.js, Vuex for state management, Vue Router for routing and Axios for HTTP requests. The application is implemented using HTML, CSS and JavaScript, which guarantees high performance and ease of use.",
-		],
-	},
+	// 		"The application interface provides convenient navigation and management using modern technologies such as Vue.js, Vuex for state management, Vue Router for routing and Axios for HTTP requests. The application is implemented using HTML, CSS and JavaScript, which guarantees high performance and ease of use.",
+	// 	],
+	// },
 	{
 		id: "10",
 		imageSrc: angularUsers,
