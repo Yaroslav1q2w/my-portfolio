@@ -29,7 +29,7 @@ const Hero: FC = () => {
 						custom={0.4}
 						variants={leftAnimation}
 					>
-						Frontend Web Developer
+						Frontend Developer
 					</motion.h1>
 					<motion.p
 						className={styles.heroText}
